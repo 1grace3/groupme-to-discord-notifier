@@ -25,7 +25,11 @@ Deploy the app to a hosting service. Some options:
 > **For local testing:** Use [ngrok](https://ngrok.com/) to expose your localhost as a public URL.
 
 ### 4. Deploy the web service
-Clone this repo (or paste its URL) into your hosting service. On Render, create a new **Project -> Web Service**, connect your repo, then add the following:
+Clone this repo (or paste its URL) into your hosting service. On Render, create a new **Project -> Web Service**, connect your repo, or click below:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/1grace3/groupme-to-discord-notifier)
+
+Add the following:
 
 **Start command:**
 ```
