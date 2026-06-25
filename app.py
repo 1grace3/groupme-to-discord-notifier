@@ -10,8 +10,8 @@ app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024
 #This is set up so that you will enter env variables to your server like Render
 BOT_ID =  os.environ["GROUPME_BOT_ID"]
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
-WEBHOOK_SECRET = os.environ["WEBHOOK_SECRET"]
 
+WEBHOOK_SECRET = os.environ["WEBHOOK_SECRET"]
 
 GROUPME_BOT_URL = 'https://api.groupme.com/v3/bots/post' 
 
@@ -75,7 +75,7 @@ def send_message(msg):
 def home():
    return "Bot is running"
 
-@app.route(f"/groupme/{WEBHOOK_SECRET}", methods=['POST'])
+@app.route(f"/groupme/", methods=['POST'])
 def hook():
     if not request.is_json:
         return "", 400
