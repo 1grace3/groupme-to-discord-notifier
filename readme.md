@@ -48,7 +48,7 @@ pip install -r requirements.txt
 | `ALLOWED_USER_IDS` | GroupMe user IDs allowed to use `!announce` | `129743,124509` |
 | `DISCORD_WEBHOOK_URL` | Your Discord webhook URL | `https://discord.com/api/webhooks/123...` |
 | `GROUPME_BOT_ID` | Your GroupMe bot ID | `abcd12345fe` |
-| `WEBHOOK_SECRET` | A random hard-to-guess string you make up | `U138BFjiwuhkb249` |
+| `WEBHOOK_SECRET` | A random string you make up, or under "add variable" in render, add "generated secret" | `U138BFjiwuhkb249` |
 
 ---
 
