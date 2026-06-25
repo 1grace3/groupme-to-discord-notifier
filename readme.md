@@ -7,17 +7,17 @@ When an authorized user sends `!announce <message>` in your GroupMe, it forwards
 ## Setup
 
 ### 1. Create a GroupMe bot
-Go to https://dev.groupme.com/bots and create a bot. Note down your **Bot ID** — you'll need it later. Leave the callback URL blank for now.
+Go to https://dev.groupme.com/bots and create a bot. Note down your **Bot ID**. Leave the callback URL blank for now.
 
 ### 2. Create a Discord webhook
-In your Discord server, go to **Server Settings → Integrations → Webhooks → New Webhook**. Select the channel you want announcements posted in and copy the webhook URL.
+In your Discord server, go to **Server Settings -> Integrations -> Webhooks -> New Webhook**. Select the channel you want announcements posted in and copy the webhook URL.
 
 ### 3. Host the app
 Deploy the app to a hosting service. Some options:
 
 | Option | Notes |
 |--------|-------|
-| [Render](https://render.com/) | Recommended — has a free plan |
+| [Render](https://render.com/) | Recommended. has a free plan |
 | [Heroku](https://heroku.com/) | Popular alternative |
 | [Fly.io](https://fly.io/) | Another solid option |
 | Self-hosted | An old laptop or Raspberry Pi works fine |
@@ -25,7 +25,7 @@ Deploy the app to a hosting service. Some options:
 > **For local testing:** Use [ngrok](https://ngrok.com/) to expose your localhost as a public URL.
 
 ### 4. Deploy the web service
-Clone this repo (or paste its URL) into your hosting service. On Render, create a new **Project → Web Service**, connect your repo, then add the following:
+Clone this repo (or paste its URL) into your hosting service. On Render, create a new **Project -> Web Service**, connect your repo, then add the following:
 
 **Start command:**
 ```
@@ -68,7 +68,7 @@ Paste the output IDs as a plain, comma-separated list.
 ---
 
 ### 5. Deploy and verify
-Click **Deploy Web Service**. Once it finishes, open the provided `.onrender.com` URL. If you see a white page that says **"Bot is running"**, you're good.
+Click **Deploy Web Service**. Once it finishes, open the provided `.onrender.com` URL. If you see a white page that says **"Bot is running"**, it's working.
 
 ### 6. Set the GroupMe callback URL
 Take that URL and append `/groupme/<your_webhook_secret>/`:
