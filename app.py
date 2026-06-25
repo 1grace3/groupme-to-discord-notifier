@@ -1,5 +1,4 @@
 import os
-import json
 import requests
 
 from flask import Flask, request
@@ -11,7 +10,8 @@ app.config["MAX_CONTENT_LENGTH"] = 1024 * 1024
 #This is set up so that you will enter env variables to your server like Render
 BOT_ID =  os.environ["GROUPME_BOT_ID"]
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
-WEBHOOK_SECRET = os.environ["WEBHOOK_SECRET"] #Optional, but it hides our url path
+WEBHOOK_SECRET = os.environ["WEBHOOK_SECRET"]
+
 
 GROUPME_BOT_URL = 'https://api.groupme.com/v3/bots/post' 
 
@@ -21,7 +21,7 @@ GROUPME_BOT_URL = 'https://api.groupme.com/v3/bots/post'
 #list of admin ids will be set in Render Dashboard so we don't have to edit the code everytime a new mod is added.
 ALLOWED_USER_IDS = set()
 for uid in os.environ.get("ALLOWED_USER_IDS", "").split(","):
-    uid = uid.strip()
+    uid = uid.strip().strip("'")
     if uid:
         ALLOWED_USER_IDS.add(uid)
 
