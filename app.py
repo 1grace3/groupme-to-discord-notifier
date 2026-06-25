@@ -74,8 +74,8 @@ def send_message(msg):
 @app.route("/")
 def home():
    return "Bot is running"
-
-@app.route(f"/groupme/", methods=['POST'])
+print(f"Registering route: /groupme/{WEBHOOK_SECRET}/")
+@app.route(f"/groupme/{WEBHOOK_SECRET}", methods=['POST'])
 def hook():
     if not request.is_json:
         return "", 400
